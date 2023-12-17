@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>jquery学習</h1>
+    <h1 id="blue">jquery学習</h1>
+    <h1 class="green">jquery学習</h1>
+    <script>
+        $(function(){
+            // セレクタ.メソッド
+            $('h1').css('color', 'red').css('font-size', '50px');
+            $('#blue').css('color', 'blue');
+            $('.green').css('color', 'green');
+        });
+    </script>
+</body>
+</html>
