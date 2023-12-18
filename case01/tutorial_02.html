@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>jquery学習</h1>
+    <h1>jquery学習</h1>
+    <!-- <h1 id="blue">jquery学習</h1> -->
+    <div>
+        <ul>
+            <li id="test1">リスト1</li>
+            <li><span>リスト2</span></li>
+            <li>リスト3</li>
+            <li class="text2">リスト4</li>
+        </ul>
+    </div>
+    <h2>jQuery_34</h2>
+    <div>
+        <span>everyday studing.</span>
+    </div>
+    <script>
+        $(function(){
+            // セレクタ.メソッド
+            // :first, :lastで前後ろ取得可能。
+            $('h1:first , h2').css('color', 'red');
+
+            // 直下にあればOK
+            // $('div > span').css('color', 'red');
+
+            // 子孫要素、中にあればOK
+            $('div span').css('color', 'red');
+
+            // eq()を反映
+            // $('li:eq(3)').css('color', 'red');
+
+            // gt()以降全て反映
+            $('li:gt(1)').css('color', 'red');
+        });
+    </script>
+</body>
+</html>
