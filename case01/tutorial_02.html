@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01</title>
+    <title>034</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
+    <style>
+        .color-red{
+            color: red;
+        }
+
+        .color-blue{
+            color: blue;
+        }
+    </style>
     <h1>jquery学習</h1>
-    <h1>jquery学習</h1>
+    <h2 class="color-blue">jquery学習</h2>
     <!-- <h1 id="blue">jquery学習</h1> -->
     <div>
         <ul>
@@ -18,15 +27,23 @@
             <li class="text2">リスト4</li>
         </ul>
     </div>
-    <h2>jQuery_34</h2>
+    <h1>jQuery_34</h1>
     <div>
         <span>everyday studing.</span>
     </div>
     <script>
         $(function(){
+            $('h1').addClass('color-red');
+            $('h2').removeClass('color-blue');
+        });
+
+        $(function(){
             // セレクタ.メソッド
             // :first, :lastで前後ろ取得可能。
-            $('h1:first , h2').css('color', 'red');
+            $('h1:last').css({
+                'color': 'red',
+                'font-size': '14px'
+            });
 
             // 直下にあればOK
             // $('div > span').css('color', 'red');
