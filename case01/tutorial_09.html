@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0910</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+        .test{
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+        }
+    </style>
+    <h1>jquery学習</h1>
+    <input type="button" id="btn" value="ボタン">
+
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+    </ul>
+
+    <div class="test"></div>
+
+    <script>
+        $(function(){
+            $('#btn').click(function(){
+                $('h1').before('<p>before</P>');
+                $('h1').after('<p>after</P>');
+                $('ul').prepend('<li>list0</li>');
+                $('ul').append('<li>list5</li>');
+
+                $('li:eq(0)').html('<p>HTMLの書き換え</p>');
+                $('li:eq(1)').text('テキストのみ書き換え');
+                $('li:eq(2)').wrap('<b></b>');
+            });
+
+            $('.test').animate({
+                width: '300px',
+                height: '300px'
+            }, 3000 );
+            $('.test').click(function(){
+                $(this).animate({
+                    width: '200px',
+                height: '200px'
+                });
+            })
+        });
+    </script>
+</body>
+</html>
