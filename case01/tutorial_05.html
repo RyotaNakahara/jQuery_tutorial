@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05678</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+        .test{
+            color: red;
+        }
+    </style>
+    <h1>jquery学習</h1>
+    <h2>jquery学習</h2>
+    <div class="menu">menu</div>
+    <ul class="menulist">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul><br>
+    <input type="button" id="btn" value="ボタン">
+    <ul class="togglelist">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ul><br><br>
+    <input type="button" id="btn2" value="ボタン">
+    <ul class="togglelist2">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ul><br><br>
+    <input type="button" id="btn3" value="ボタン">
+    <ul class="togglelist3">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ul>
+
+    <script>
+        $(function(){
+            $('h1').hide('slow');
+            $('h1').show('slow');
+            $('h1').click(function(){
+                $(this).css('color', 'red')
+            });
+            $('h1').mouseover(function(){
+                $(this).text('マウスが乗ったよ');
+            }).mouseout(function(){
+                $(this).text('jquery学習');
+            });
+
+            $('h2').hover(function(){
+                $(this).text('マウスが乗ったよ');
+            }, function(){
+                $(this).text('jquery学習');
+            });
+            $('h2').click(function(){
+                $('h2').addClass('test');
+            })
+
+            $('.menulist').hide();
+            $('.menu').mouseover(function(){
+                $('.menulist').slideDown();
+            }).mouseout(function(){
+                $('.menulist').slideUp();
+            })
+
+            $('.togglelist').toggle();
+            $('#btn').click(function(){
+                $('.togglelist').toggle(1000);
+            });
+
+            $('.togglelist2').toggle();
+            $('#btn2').click(function(){
+                $('.togglelist2').fadeToggle();
+            });
+
+            $('.togglelist3').toggle();
+            $('#btn3').click(function(){
+                $('.togglelist3').slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>
