@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+        
+    </style>
+    <h1 id="blue">jquery学習</h1>
+
+    <p>サンプル</p><br><br><br>
+    <p>サンプル</p><br><br><br>
+    <p>サンプル</p><br><br><br>
+    <p>サンプル</p><br><br><br>
+    <p>サンプル</p><br><br><br>
+    <p>サンプル</p><br><br><br>
+    <p>サンプル</p><br><br><br>
+    <p>サンプル</p><br><br><br>
+    <p>サンプル</p><br><br><br>
+    <p>サンプル</p><br><br><br>
+    <p>サンプル</p><br><br><br>
+    <p>サンプル</p><br><br><br>
+
+    <a href="#" id="BackToTop">TOPに戻る</a>
+
+    <script>
+        $(function(){
+            // $('#BackToTop').click(function(){
+            //     $('body,html').animate({
+            //         scrollTop: 0
+            //     }, 500)
+            // });
+
+            // 変数
+            // var test = 'h1';
+            // $(test).css('color', 'red');
+
+            // var test = 'blue';
+            // $('#' + test).css('color', 'blue');
+
+            var test = $('#blue');
+            test.css('color', 'blue');
+
+            var btn = $('#BackToTop');
+            var speed = 500;
+            var state = 250;
+
+            btn.click(function(){
+                $('body,html').animate({
+                    scrollTop: state
+                }, speed)
+            });
+        });
+    </script>
+</body>
+</html>
