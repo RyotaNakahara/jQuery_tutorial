@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+        header {
+            height: 480px;
+            line-height: 480px;
+            text-align: center;
+        }
+
+        nav {
+            width: 100%;
+            background-color: azure;
+            text-align: center;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 0;
+            z-index: 2;
+        }
+    </style>
+    <header><h1>jquery学習</h1></header>
+    <nav>ナビゲーション</nav>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+
+    <script>
+        $(function(){
+            var set = $('nav').offset().top; //座標取得
+
+            $(window).scroll(function(){ //スクロールしたときの処理
+                if($(window).scrollTop() > set){
+                    $('nav').addClass('fixed');
+                } else{
+                    $('nav').removeClass('fixed');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

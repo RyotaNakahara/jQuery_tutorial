@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+        .square{
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+            position: fixed;
+        }
+    </style>
+    <h1>jquery学習</h1>
+    <div class="square"></div>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+
+    <script>
+        $(function(){
+            $('.square').hide();
+
+            $(window).scroll(function(){
+                if($(this).scrollTop() > 200){
+                    $('.square').fadeIn();
+                } else {
+                    $('.square').fadeOut();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
